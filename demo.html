@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>Demo Talep</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/layout.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="site-wrapper">
+
+<!-- HEADER -->
+<header class="header">
+    <div class="header-inner">
+
+        <div class="logo">
+            <img src="assets/logo.png" style="height: 30px;">
+        </div>
+
+        <nav class="nav">
+            <a href="home.html">Ana Sayfa</a>
+            <a href="platform.html">Platform</a>
+            <a href="help.html">Yardım</a>
+            <a href="about-us.html">Hakkımızda</a>
+            <a href="contact.html">İletişim</a>
+            <a style="font-weight: bold; color:  brown;" href="demo.html">Demo İste</a>
+        </nav>
+
+        <div class="header-buttons">
+            <a class="btn-outline" href="login.html">Giriş Yap</a>
+            <a class="btn-dark" href="register.html">Kayıt Ol</a>
+        </div>
+
+    </div>
+</header>
+
+
+<main class="main">
+
+    <div class="auth-card">
+
+        <div class="welcome-badge">🎯 Demo</div>
+
+        <h1>Lorem Ipsum Dolor Sit</h1>
+
+        <p class="description">
+            Demo talep formunu doldurun, sizinle iletişime geçelim.
+        </p>
+
+        <form id="demoForm">
+
+            <div class="form-group">
+                <label>Adınız ve Soyadınız</label>
+                <input type="text" required>
+            </div>
+
+            <div class="form-group">
+                <label>Şirket İsmi</label>
+                <input type="text">
+            </div>
+
+            <div class="form-group">
+                <label>E-posta Adresi</label>
+                <input type="email" id="email" required>
+            </div>
+
+            <div class="form-group">
+                <label>Telefon</label>
+                <input type="tel">
+            </div>
+
+            <div class="form-group">
+                <label>Mesaj</label>
+                <textarea class="textarea" rows="4"></textarea>
+            </div>
+
+            <button>Gönder</button>
+        </form>
+
+    </div>
+
+</main>
+
+<footer class="footer">
+
+    <div class="footer-inner">
+
+        <div class="footer-about">
+            <img src="assets/logo.png" height="40">
+
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+
+            <a href="mailto:sales@folsec.com" class="footer-mail">
+                ✉ sales@folsec.com
+            </a>
+
+        </div>
+
+        <div>
+            <h4>Şirket</h4>
+            <a href="#">Hakkımızda</a>
+            <a href="partner-application.html">Partnerler</a>
+            <a href="#">Distribütörler</a>
+            <a href="#">Özellikler</a>
+            <a href="#">İletişim</a>
+        </div>
+
+        <div>
+            <h4>Destek</h4>
+            <a href="#">Yardım</a>
+            <a href="support.html">Destek</a>
+            <a href="#">Blog</a>
+            <a href="new-ticket.html">Topluluk</a>
+        </div>
+
+        <div>
+            <h4>Hızlı Linkler</h4>
+            <a href="#">Online Demo</a>
+            <a href="#">Videolar</a>
+            <a href="#">Ekranlar</a>
+            <a href="privacy-policy.html">Gizlilik Sözleşmesi</a>
+            <a href="feedback.html">Geri Bildirim</a>
+        </div>
+
+    </div>
+
+<div class="footer-bottom">
+
+    <div class="footer-left">
+        © Folsec 2026. Tüm hakları saklıdır
+
+        <div class="lang-select">
+            <button class="lang-btn">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/United-kingdom_flag_icon_round.svg/960px-United-kingdom_flag_icon_round.svg.png">
+             <span class="text">EN</span>
+    <span class="arrow">▾</span>
+            </button>
+
+            <div class="lang-menu">
+                <a href="#"><img src="https://flagcdn.com/w20/tr.png"> TR</a>
+                <a href="#"><img src="https://flagcdn.com/w20/gb.png"> EN</a>
+                <a href="#"><img src="https://flagcdn.com/w20/de.png"> DE</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-social">
+                    <img src="assets/Linkedin.png" style="height: 30px;">
+                    <img src="assets/Instagram.png" style="height: 30px;">
+                    <img src="assets/Facebook.png" style="height: 30px;">
+                    <img src="assets/Youtube.png" style="height: 30px;">
+
+    </div>
+
+</div>
+
+</footer>
+
+</div>
+
+<script src="js/app.js"></script>
+<script>
+document.querySelectorAll('.lang-btn').forEach(btn=>{
+    btn.onclick = () => {
+        btn.parentElement.classList.toggle('open');
+    }
+});
+</script>
+</body>
+</html>

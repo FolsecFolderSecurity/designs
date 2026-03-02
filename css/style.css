@@ -1,0 +1,533 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+/* Sadece Login ve Register için Özel Arka Plan */
+body.auth-bg {
+    background: linear-gradient(135deg, #cfdedd, #e6f0ef);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Demo sayfası için genel akış düzeni */
+body.demo-page {
+    display: block; /* Kartı ortalamak yerine sayfa akışını kullanır */
+}
+
+.login-card {
+    width: 100%;
+    max-width: 480px;
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 40px 35px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+    
+}
+
+/* Logo */
+.logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo img {
+    height: 45px;
+}
+
+/* Badge */
+.welcome-badge {
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    margin: 0 auto 20px;
+    padding: 10px 18px;
+    background: #ffffff;
+    border-radius: 10px;
+    font-size: 13px;
+    color: #555;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+}
+
+/* Title */
+h1 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #0d1321;
+}
+
+.description {
+    text-align: center;
+    font-size: 14px;
+    color: #6b7280;
+    margin-bottom: 30px;
+}
+
+/* Form */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 13px;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 8px;
+    display: block;
+}
+
+input {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    background: #fff;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: #0b0f3b;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(11,15,59,0.1);
+}
+
+.password-wrapper {
+    position: relative;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* Row */
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+.checkbox-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.checkbox-wrapper input {
+    width: 16px;
+    height: 16px;
+    accent-color: #0b0f3b;
+    cursor: pointer;
+    margin: 0;
+}
+
+
+.forgot {
+    text-decoration: none;
+    color: #555;
+}
+
+.forgot:hover {
+    text-decoration: underline;
+}
+
+/* Button */
+button {
+    width: 100%;
+    padding: 14px;
+    border-radius: 12px;
+    border: none;
+    font-size: 14px;
+    font-weight: 600;
+    background: linear-gradient(90deg, #0b0f3b, #11186a);
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+/* Bottom Text */
+.terms {
+    margin-top: 20px;
+    font-size: 12px;
+    text-align: center;
+    color: #777;
+}
+
+.register {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 13px;
+}
+
+
+.register a {
+    font-weight: 900;
+    color: #0b0f3b;
+  text-decoration: underline;
+}
+
+/* Ortak Kart Yapısı */
+.auth-card {
+    width: 100%;
+    max-width: 520px;
+    background: #fff;
+    border-radius: 24px;
+    padding: 40px 35px  35px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+    padding-bottom: 20px;
+    
+}
+
+/* Görseldeki özel hizalamalar için eklemeler */
+.auth-card .description {
+    line-height: 1.6;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.auth-card .welcome-badge {
+    border: 1px solid #f0f0f0;
+    font-weight: 500;
+}
+
+/* Linklerin alt çizgisi ve rengi için spesifik ayar */
+.auth-card .terms a {
+    font-weight: 600;
+}
+
+/* Select */
+select {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    background: #fff;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+select:focus {
+    border-color: #0b0f3b;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(11,15,59,0.1);
+}
+
+/* Ana Konteyner - Header/Footer genişliği ile eşleşir */
+.content-container {
+    max-width: 1200px; /* Header-inner genişliğiniz kaçsa ona eşitleyin */
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+.form-wrapper {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+.form-header {
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Badge ve metinleri yatayda ortalar */
+    text-align: center;
+}
+
+.form-header h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 15px 0 10px 0;
+}
+
+.form-header .description {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #64748b;
+    max-width: 100%; 
+    margin: 0 auto;
+    padding: 0 10px;
+}
+/* Başlık Alanı */
+.page-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.page-header h1 {
+    font-size: 42px;
+    font-weight: 600;
+    color: #0f172a;
+    margin-bottom: 15px;
+}
+
+.page-header .description {
+    color: #64748b;
+    font-size: 16px;
+}
+
+/* Metin İçeriği Grid Yapısı */
+.policy-body {
+    display: grid;
+    grid-template-columns: 1fr; /* Tek sütun, temiz okuma düzeni */
+    gap: 30px;
+    max-width: 800px; /* Metin okunabilirliği için orta alanı daraltıyoruz */
+    margin: 0 auto;
+}
+
+.policy-body h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 12px;
+}
+
+.policy-body p, .policy-body li {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #475569;
+    margin-bottom: 10px;
+}
+
+.policy-body ul {
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+/* İletişim Bölümü */
+.contact-section {
+    margin-top: 20px;
+    padding: 30px;
+    background-color: #f8fafc;
+    border-radius: 12px;
+    text-align: center;
+}
+
+/* Header ve Footer ile aynı genişliği sağlayan ana kapsayıcı */
+.content-container {
+    max-width: 1200px; /* Mevcut projenin grid genişliği */
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.feature-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Satırlar arası boşluk */
+    max-width: 900px; /* Metinlerin çok yayılmaması için ideal genişlik */
+}
+
+.feature-item {
+    display: flex;
+    align-items: flex-start; /* İkonun metnin ilk satırında durmasını sağlar */
+    gap: 15px; /* İkon ile metin arasındaki boşluk */
+}
+
+.check-icon {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0; /* Metin uzasa bile ikonun küçülmesini engeller */
+    margin-top: 2px; /* Metinle tam hizalamak için ufak ayar */
+}
+
+.feature-item p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #334155;
+    margin: 0;
+}
+
+.cta-full-width {
+    background-color: #f0fdfa; 
+    width: 100%;
+    padding: 40px 0; 
+    display: block;
+}
+
+/* İçeriği grid yapısına (header/footer genişliğine) sabitleyen kısım */
+.cta-full-width .content-container {
+    max-width: 1200px; /* Senin grid genişliğin */
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Badge tasarımı */
+.cta-badge {
+    background: #fff;
+    padding: 8px 16px;
+    border-radius: 10px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+    font-size: 14px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+    margin-bottom: 25px;
+}
+
+.cta-full-width h2 {
+    font-size: 36px;
+    color: #0f172a;
+    margin-bottom: 20px;
+}
+
+.cta-description {
+    max-width: 800px; /* Metnin çok yayılmaması için */
+    color: #64748b;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+/* Dosya linkleri */
+.cta-links {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cta-links a {
+    text-decoration: none;
+    color: #1e293b;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Koyu Buton */
+.btn-request {
+    background-color: #0b0d39;
+    color: white;
+    padding: 16px 45px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-request:hover {
+    background-color: #1a1d5a;
+    transform: translateY(-2px);
+}
+
+/* Dosya Yükleme Kutusu Tasarımı */
+.file-upload-container {
+    border: 2px dashed #e2e8f0; /* Kesikli kenarlık */
+    border-radius: 12px;
+    padding: 30px 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: #f8fafc;
+    margin-top: 8px;
+}
+
+.file-upload-container:hover {
+    border-color: #6366f1; /* Hover durumunda renk değişimi */
+    background-color: #f1f5f9;
+}
+
+.upload-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.upload-icon {
+    color: #64748b;
+    margin-bottom: 5px;
+}
+
+.upload-content strong {
+    font-size: 14px;
+    color: #1e293b;
+}
+
+.upload-content span {
+    font-size: 12px;
+    color: #94a3b8;
+}
+
+/* Gönder Butonu Stil Önerisi (Resimdeki gibi koyu lacivert) */
+button {
+    width: 100%;
+    padding: 14px;
+    background-color: #05051e; /* Görseldeki koyu renk */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+/* Mobil için alt alta dizme */
+@media (max-width: 768px) {
+    .cta-links {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .cta-full-width h2 {
+        font-size: 28px;
+    }
+}
+
+/* Mobil Uyumluluk */
+@media (max-width: 768px) {
+    .content-container {
+        padding: 20px 15px;
+    }
+    .feature-item p {
+        font-size: 14px;
+    }
+}
+
+/* Mobil Uyumluluk */
+@media (max-width: 768px) {
+    .page-header h1 {
+        font-size: 32px;
+    }
+    
+    .content-container {
+        padding: 40px 15px;
+    }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .auth-card {
+        padding: 30px 20px;
+        border-radius: 18px;
+    }
+}

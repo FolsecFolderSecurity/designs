@@ -1,0 +1,281 @@
+/* BODY RESET */
+.site-wrapper{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+}
+
+body{
+    display:block;
+    padding:0;
+}
+
+/* HEADER */
+.header{
+    background:#fff;
+    box-shadow:0 2px 10px rgba(0,0,0,.05);
+}
+
+.header-inner{
+    max-width:1200px;
+    margin:auto;
+    padding:14px 20px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+}
+
+.nav{
+    display:flex;
+    gap:20px;
+}
+
+.nav a{
+    text-decoration:none;
+    color:#333;
+    font-size:14px;
+}
+
+.header-buttons{
+    display:flex;
+    gap:10px;
+}
+
+.btn-outline{
+    padding:7px 14px;
+    border-radius:10px;
+    border:1px solid #ddd;
+}
+
+.btn-dark{
+    padding:7px 14px;
+    border-radius:10px;
+    background:#0b0f3b;
+    color:#fff;
+}
+
+/* MAIN */
+.main{
+    flex:1;
+    display:flex;
+    justify-content:center;
+    padding:40px 20px;
+}
+
+/* FOOTER GENEL */
+.footer{
+    background:#fff;
+    border-top:1px solid #eaeaea;
+    padding:50px 20px 25px;
+}
+
+.footer-inner{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr 1fr;
+    gap:40px;
+}
+
+/* SOL BLOK */
+.footer-about{
+    text-align:left;
+}
+
+.footer-about img{
+    margin-bottom:12px;
+}
+
+.footer-about p{
+    font-size:13px;
+    color:#777;
+    margin-bottom:15px;
+    max-width:260px;
+}
+
+/* MAIL BUTTON SOLA YASLI */
+.footer-mail{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:8px 14px;
+    border:1px solid #e5e5e5;
+    border-radius:20px;
+    font-size:13px;
+    text-decoration:none;
+    color:#333;
+    background:#fff;
+}
+
+/* BAŞLIK ÇİZGİ */
+.footer-inner h4{
+    font-size:14px;
+    margin-bottom:12px;
+    padding-bottom:8px;
+    border-bottom:1px solid #eee;
+}
+
+/* LİNKLER */
+.footer-inner a{
+    display:block;
+    font-size:13px;
+    color:#555;
+    text-decoration:none;
+    margin-bottom:6px;
+}
+
+.footer-inner a:hover{
+    color:#0b0f3b;
+}
+
+/* ALT BAR */
+.footer-bottom{
+    max-width:1200px;
+    margin:30px auto 0;
+    padding-top:15px;
+    border-top:1px solid #eee;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:15px;
+    font-size:13px;
+    color:#777;
+}
+
+/* SOCIAL ICONS */
+.footer-social{
+    display:flex;
+    gap:12px;
+}
+
+.footer-social a{
+    width:30px;
+    height:30px;
+    border-radius:6px;
+    background:#111;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:13px;
+    text-decoration:none;
+}
+/* TEXTAREA INPUT GİBİ GÖRÜNSÜN */
+textarea{
+    width:100%;
+    padding:12px 14px;
+    border-radius:12px;
+    border:1px solid #ddd;
+    background:#fff;
+    font-size:14px;
+    transition:.3s;
+    resize:vertical;
+    min-height:120px;   /* sadece height daha büyük */
+}
+
+textarea:focus{
+    border-color:#0b0f3b;
+    outline:none;
+    box-shadow:0 0 0 3px rgba(11,15,59,0.1);
+}
+
+.footer-left{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+/* LANG SELECT */
+.lang-select{
+    position:relative;
+}
+
+.lang-btn{
+    display:flex;
+    align-items:center;
+    gap:6px;
+    border:1px solid #e5e5e5;
+    border-radius:20px;
+    padding:6px 10px;
+    background:#fff;
+    font-size:12px;
+    cursor:pointer;
+}
+
+.lang-btn img{
+    width:16px;
+    border-radius:50%;
+}
+
+.lang-menu{
+    position:absolute;
+    bottom:35px;
+    left:0;
+    background:#fff;
+    border:1px solid #eee;
+    border-radius:10px;
+    box-shadow:0 10px 20px rgba(0,0,0,0.08);
+    display:none;
+    min-width:110px;
+}
+
+.lang-menu a{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    padding:8px 10px;
+    font-size:13px;
+    text-decoration:none;
+    color:#333;
+}
+/* Sadece EN yazısı için */
+.lang-btn .text {
+    color: #111; 
+}
+
+/* Sadece ok işareti için */
+.lang-btn .arrow {
+    color: #111;
+    font-size: 12px; /* Oku küçültmek istersen */
+}
+
+.lang-menu a:hover{
+    background:#f5f5f5;
+}
+
+.lang-select.open .lang-menu{
+    display:block;
+}
+
+/* MOBIL */
+@media(max-width:600px){
+    .footer-bottom{
+        align-items:flex-start;
+    }
+}
+
+/* MOBILE */
+@media(max-width:900px){
+    .nav{
+        display:none;
+    }
+
+    .footer-inner{
+        grid-template-columns:1fr 1fr;
+        gap:25px;
+    }
+}
+
+@media(max-width:600px){
+    .footer-inner{
+        grid-template-columns:1fr;
+    }
+
+    .header-inner{
+        flex-wrap:wrap;
+        gap:10px;
+    }
+}
